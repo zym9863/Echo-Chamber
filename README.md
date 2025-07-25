@@ -1,5 +1,113 @@
-# Vue 3 + TypeScript + Vite
+# 回音室 (Echo Chamber)
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+**中文** | [English](./README_EN.md)
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+一个专注于心理健康的情绪记录和时光慢递应用，帮助用户记录心情、管理情绪，并与未来的自己对话。
+
+## ✨ 功能特色
+
+### 🕰️ 时光慢递
+- 将当下的心情、想对未来说的话封存起来
+- 设定特定的日期才能开启，让时间来沉淀和疗愈情绪
+- 支持文字内容，未来将支持语音和图片
+- 可查看所有信件状态：封存中、可开启、已开启
+
+### 🧩 情绪拼图
+- 通过颜色和意象卡片记录每天的情绪
+- 设置情绪强度和心情备注
+- 查看情绪历史记录和统计数据
+- 生成独特的情绪拼图图谱，帮助了解情绪模式
+
+### 📊 数据统计
+- 显示时光慢递总数和可开启信件数
+- 情绪记录统计和分析
+- 平均情绪强度计算
+- 主要情绪类型分析
+
+## 🛠️ 技术栈
+
+- **前端框架**: Vue 3 + TypeScript
+- **构建工具**: Vite
+- **UI 组件库**: Element Plus
+- **状态管理**: Pinia
+- **路由**: Vue Router
+- **本地存储**: Dexie (IndexedDB)
+- **日期处理**: Day.js
+- **图标**: Element Plus Icons
+
+## 📁 项目结构
+
+```
+src/
+├── components/          # 通用组件
+│   └── HelloWorld.vue  # 示例组件
+├── views/              # 页面组件
+│   ├── Home.vue        # 首页
+│   ├── TimeMail.vue    # 时光慢递页面
+│   └── MoodJigsaw.vue  # 情绪拼图页面
+├── services/           # 业务逻辑服务
+│   └── database.ts     # 数据库操作服务
+├── stores/             # 状态管理
+│   └── main.ts         # 主要状态存储
+├── router/             # 路由配置
+│   └── index.ts        # 路由定义
+├── db/                 # 数据库配置
+│   └── index.ts        # Dexie 数据库配置
+├── assets/             # 静态资源
+└── App.vue             # 根组件
+```
+
+## 🚀 快速开始
+
+### 环境要求
+- Node.js >= 16
+- pnpm (推荐) 或 npm
+
+### 安装依赖
+```bash
+pnpm install
+```
+
+### 开发环境运行
+```bash
+pnpm dev
+```
+
+### 构建生产版本
+```bash
+pnpm build
+```
+
+### 预览生产版本
+```bash
+pnpm preview
+```
+
+## 🗄️ 数据结构
+
+### 时光慢递 (TimeMail)
+- 标题、内容、类型（文字/语音/图片）
+- 创建时间、开启时间
+- 开启状态
+
+### 情绪记录 (MoodRecord)
+- 日期、颜色、情绪类型
+- 意象卡片、情绪强度
+- 心情备注
+
+### 配置数据
+- 情绪颜色 (MoodColor)：预设的情绪颜色和分类
+- 情绪卡片 (EmotionCard)：情绪表达的图标和名称
+
+## 🎯 未来计划
+
+- [ ] 语音记录支持
+- [ ] 图片上传功能
+- [ ] 情绪分析和建议
+- [ ] 数据导出功能
+- [ ] 主题定制
+- [ ] 移动端适配优化
+
+## 📄 开源协议
+
+本项目仅供学习和个人使用。
